@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgba(140, 140, 140, 0.4);
+}
+
+.form-structure {
+    width: 70vw;
+    background-color: white;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 10px;
+    background-image: url("memory/license3.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.form-structure h1 {
+    font-size: 35px;
+    color: lightgreen;
+    text-shadow: 0 0 15px black;
+    text-align: center;
+}
+
+.form-structure h1::after {
+    content: "";
+    display: block;
+
+    width: 90%;
+    border: 3px solid red;
+    margin: 10px auto;
+}
+
+form {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+form div {
+    width: 45%;
+    margin-top: 10px;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+}
+
+/* form label {
+    font-size: 20px;
+} */
+
+form input,
+select,
+textarea {
+    height: 25px;
+    width: 75%;
+    border-radius: 5px;
+    border: none;
+
+}
+
+.field4 input {
+    height: 15px;
+    width: 15px;
+}
+
+.field13 input {
+    background-color: white;
+    padding: 2px 0 5px 5px;
+    box-sizing: border-box;
+}
+
+.button {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button input {
+    background-color: lightgreen;
+    margin-left: 12px;
+    height: 30px;
+    width: 100px;
+    box-shadow: 0 0 10px 5px white;
+}
+
+form div .important::after {
+    content: "*";
+    color: red;
+}
+
+@media screen and (max-width: 600px) {
+    .form-structure {
+        padding: 20px;
+        margin: 10px auto;
+        width: 85vw;
+    }
+
+    form div {
+        width: 100%;
+        margin-top: 10px;
+        display: block;
+
+    }
+
+    form div .important {
+        font-size: 20px;
+        display: block;
+    }
+
+    form div input,
+    select,
+    textarea {
+        height: 35px;
+        width: 100%;
+        margin-top: 10px;
+        border-radius: 5px;
+    }
+
+    .button input {
+        width: 100%;
+        margin-top: 10px;
+        border-radius: 5px;
+        display: block;
+    }
+
+}
+
+.heading {
+    margin-top: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.heading::before {
+    content: "HAPPY SOCKS";
+    position: absolute;
+    z-index: -1;
+    top: -5px;
+    left: -5px;
+    color: transparent;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 1px;
+}
